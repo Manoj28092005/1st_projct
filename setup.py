@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages 
-from typing import Listist
+from typing import List
 def get_requirements(file_path):
     """
     This function returns a list of requirements from the given file path.
@@ -8,7 +8,7 @@ def get_requirements(file_path):
         req=[]
         with open(file_path)as file_obj:
             reqq= file_obj.readlines()
-            reqq=[req.repalce('\n',"")for req in reqq ]
+            reqq=[req.replace('\n',"")for req in reqq ]
             HYPHEN_E_DOT = '-e .'
             if HYPHEN_E_DOT in reqq:
                 reqq.remove(HYPHEN_E_DOT)
